@@ -6,7 +6,11 @@
   "dependencies": {
     "react": "^15.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2017": "^1.4.0",
+    "babel-preset-react": "^6.11.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
