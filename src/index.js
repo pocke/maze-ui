@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+import 'whatwg-fetch';
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 
