@@ -1,8 +1,9 @@
 import 'babel-polyfill';
 import 'whatwg-fetch';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory } from 'react-router';
 
 class Header extends React.Component {
   render() {
@@ -14,12 +15,22 @@ class Header extends React.Component {
   }
 }
 
+class App extends React.Component {
+  render() {
+    return (
+      <h1>Hello React!</h1>
+    )
+  }
+}
+
 ReactDOM.render(
   (
     <div>
       <Header></Header>
       <div className="container" style={{paddingTop: '60px'}}>
-        <h1>Hello!</h1>
+        <Router history={browserHistory}>
+          <Route path="/" component={App}/>
+        </Router>
       </div>
     </div>
   ),
